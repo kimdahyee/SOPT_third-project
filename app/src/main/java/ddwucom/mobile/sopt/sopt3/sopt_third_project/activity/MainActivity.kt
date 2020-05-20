@@ -21,5 +21,10 @@ class MainActivity : AppCompatActivity() {
             val intent2 = Intent(this, InstaActivity::class.java)
             startActivity(intent2)
         }
+
+        button_constraint.setOnClickListener {
+            val intent3 = Intent(this, LayoutActivity::class.java)
+            startActivity(intent3)
+        }
     }
 }
