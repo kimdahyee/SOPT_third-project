@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: "kotlin-kapt"
+//왜 제일 상단에 넣어주면 build 에러가 나는걸까 ?
 
 android {
     compileSdkVersion 28
@@ -25,7 +25,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.core:core-ktx:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
@@ -34,6 +34,17 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit-mock:2.6.2'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    //recyclerview를 다루기 위한 라이브러리
+    implementation "com.google.android.material:material:1.2.0-alpha05"
+    //BottomNavigation 등 구글에서 제공하는 디자인 라이브러리
+    implementation "com.github.bumptech.glide:glide:4.10.0"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt "com.github.bumptech.glide:compiler:4.10.0"
+    //이미지 url을 로딩시켜 뷰에 연결해주는 라이브러리
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //동그란 이미지 커스텀 뷰 라이브러리
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'

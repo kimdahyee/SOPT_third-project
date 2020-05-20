@@ -1,10 +1,11 @@
-package ddwucom.mobile.sopt.sopt3.sopt_third_project
+package ddwucom.mobile.sopt.sopt3.sopt_third_project.activity
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import ddwucom.mobile.sopt.sopt3.sopt_third_project.R
 import ddwucom.mobile.sopt.sopt3.sopt_third_project.data.RequestLogin
 import ddwucom.mobile.sopt.sopt3.sopt_third_project.data.ResponseLogin
 import ddwucom.mobile.sopt.sopt3.sopt_third_project.network.RequestToServer
